@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+/* --btn-main-color: #272729; */
+
+body {
+  font-family: 'Comfortaa', cursive;
+  /* min-height: 100%;
+  min-width: 100%; */
+  background-color: #272b30;
+  color: #fff;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nerko One', cursive;
+  color: #fff !important;
+}
+P {
+  color: #eee !important;
+}
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+  color: #09c !important;
+  transition: all 0.5s;
+}
+
+.home .card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+  overflow: hidden;
+}
+
+header img {
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+.home .card:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+nav {
+  background-color: rgb(58, 73, 123, 0.9) !important;
+
+  margin-inline: auto;
+  /* margin-top: -30px; */
+  position: absolute !important;
+  top: 100px;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav li a {
+  color: #ddd !important;
+}
+
+.details {
+  background-color: #272729be;
+
+  backdrop-filter: blur(4px);
+  min-height: 100vh;
+}
+
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+.spinner::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
